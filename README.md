@@ -4,7 +4,7 @@ TODO:
 
 - [x] 一篇GraphQL英文文章
 - [x] GraphQL文档
-- [ ] GraphQL文档demo
+- [x] GraphQL文档demo
 - [ ] Apollo GraphQL文档
 - [ ] Apollo GraphQL文档的demo
 - [ ] 跑一遍GraphQL开源项目并修改
