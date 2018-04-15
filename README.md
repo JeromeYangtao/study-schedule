@@ -9,6 +9,6 @@ TODO:
 - [x] Apollo GraphQL文档的demo
 - [ ] 跑一遍GraphQL开源项目并修改
 - [ ] 跑一遍Apollo GraphQL开源项目并修改
-- [ ] 翻译一篇GraphQL文章
+- [x] 翻译一篇GraphQL文章:https://juejin.im/post/5ad353986fb9a028c14ae909
 - [ ] 翻译一篇Apollo GraphQL文章
 
