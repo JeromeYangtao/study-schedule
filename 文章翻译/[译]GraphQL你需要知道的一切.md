@@ -1,17 +1,20 @@
 > 原文链接:https://medium.com/@weblab_tech/graphql-everything-you-need-to-know-58756ff253d8
 
+>原文作者:Weblab Technology
+
+
 >译者:杨涛
 
 ![](https://upload-images.jianshu.io/upload_images/3474707-1ed4b88d4286d820.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-       你可能已经构建和使用REST API一段时间了，并且最近开始听说GraphQL--一种新型的API技术。有些人说它很好，但一些人并不认同。那么，我相信你肯定很想知道GraphQL让人惊奇的地方在哪和它和传统方法有什么不一样。
+       你可能已经构建和使用REST API一段时间了，并且最近开始听说GraphQL--一种新型的API技术。有些人说它很好，但一些人并不认同。那么，我相信你肯定很想知道GraphQL让人惊奇的地方在哪和它与传统方法有什么不一样。
       
 这篇文章的目的是指出GraphQL相关的主要功能和讨论特定API规范的优点和缺点。
 
-GraphQL通常被描述为一种"前端导向"的API技术，因为它让前端开发者以一种比以前简单得多的方式请求数据。Facebook推广这种查询语言的目的是以符合直觉和可伸缩的方式获取数据，定制客户端应用，并且描绘数据请求和交互。最好的一点是这种查询语言不依赖于任何特定的数据库管理系统，并且得到了当前数据格式和编码方式的支持。
+GraphQL通常被描述为一种"前端导向"的API技术，因为它让前端开发者以一种比以前简单得多的方式请求数据。Facebook引入了这种查询语言，它的目标是以符合直觉和可伸缩的方式定制客户端应用，以描述数据的先决条件和交互。最好的一点是这种查询语言不依赖于任何特定的数据库管理系统，并且得到了当前数据格式和编码方式的支持。
 
 **传统REST的一个基本问题是，客户端不能个性化的收集数据**。除此之外，运行和控制多个端点(译者注:表示API的具体网址,也可以理解为 接口)是另一个难点，因为客户端经常需要从多个端点获取数据。
 
-当建立起一个GraphQL服务器，只需要简单的URL就能获取和修改数据。因此，一个用户可以通过传递查询字符串和提及他们需要什么来向服务器请求数据集。
+当建立起一个GraphQL服务器，只需要简单的URL就能获取和修改数据。因此，一个用户可以通过传递查询字符串和声明他们需要什么来向服务器请求数据集。
 
 在我们继续之前，在这你可以找到我们的个人实践。
      [graphlql-example](https://github.com/weblab-technology/graphql-example)
@@ -20,8 +23,8 @@ GraphQL通常被描述为一种"前端导向"的API技术，因为它让前端�
 ![](https://upload-images.jianshu.io/upload_images/3474707-1ffc42696f8d5fb8.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 说到相似之处，REST和GraphQL都用于构建API。 另外，它们都可以通过HTTP进行管理。
-至于差异，REST主是是一个以软件为中心的结构化概念，没有规范，也不求明确的工具集。它更关注API的稳定性而不是性能。
-GraphQL，另一方面，是一种被设计于通过HTTP管理端点，提高性能和适用性的查询语言。我甚至可以说，把查询语言和开发web服务架构风格可能看起来很奇怪:)。一些其他显著的不同包括:
+至于差异，REST主要是一个以软件为中心的结构化概念，没有规范，也不求明确的工具集。它更关注API的稳定性而不是性能。
+GraphQL，另一方面，是一种被设计于通过HTTP管理端点，提高性能和适用性的查询语言。我甚至可以说，查询语言和开发web的架构风格放在一起做比较，可能看起来很奇怪:)。一些其他显著的不同包括:
 ### 数据获取
 毫无疑问，数据获取是GraphQL的一个最引人瞩目的特点之一。通过标准的REST API去生成和获取数据，我们可能需要向多个端点发起请求。相比之下，GraphQL提供了可以获取服务器数据的单端点
 ```
@@ -72,7 +75,7 @@ Status Code: 200 OK
  ],
 ```
 REST API 以不同的方式运作。虽然基本的端点都能在REST API中获取，但不是所有端点都能返回稀疏字段。[译者注:即可能包含多余的字段]
-相比之下，GraphQL非常容易的监控特定字段的使用。API使用者能在特定的客户端部署获取到的字段。
+相比之下，GraphQL非常容易监控特定字段的使用。API使用者能在特定的客户端部署获取到的字段。
 ### 性能优化
 REST的请求默认作为一个整体，GraphQL通常尽量发送最少的请求。即便REST的每个请求返回最基本的部分，相同情况下，GraphQL能传输更多的数据片段。
 ## GraphQL的缺点
@@ -173,7 +176,7 @@ Subscriptions用于设置和保存和服务器的实时连接。它可以让你�
 如果你有一个正在运行的项目，它是很难快速从RESTful API迁移到GraphQL的。但好消息是你可以同时享受这两种方法的好处。
 例如你可以用GraphQL的queries去重构前端里获取数据的方式，然后再开始整合
 mutations。它允许你缓慢的减少你的controllers里的actions
-此外，你可以在项目中长时间保持两种方法并存。例如，如果你想简化授权机制，你可以一直用RESR架构提供帮助。
+此外，你可以在项目中长时间保持两种方法并存。例如，如果你想简化授权机制，你可以一直用REST架构提供帮助。
 ## 总结
 ![](https://upload-images.jianshu.io/upload_images/3474707-fe017ef013d1966b.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 回忆起90年代末作为一个健壮的计算机网络应用交互结构化数据的协议，曾受到热烈欢迎和获得巨大的声誉的[SOAP](https://simple.wikipedia.org/wiki/SOAP_%28protocol%29)。但是它的载荷明显很高并且以前的应用容易提高的数据丢失和阻塞的几率。
@@ -200,7 +203,7 @@ https://github.com/weblab-technology/graphql-example
 
 
 ### 译者注
-原文提到的GraphQL一些问题，在[Apollo GraphQL](https://github.com/apollographql)这个项目中都得到了一定程度的解决，比加缓存
+原文提到的GraphQL一些问题，在[Apollo GraphQL](https://github.com/apollographql)这个项目中都得到了一定程度的解决，比加缓存。
 
 
 

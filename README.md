@@ -11,4 +11,5 @@ TODO:
 - [ ] 跑一遍Apollo GraphQL开源项目并修改
 - [x] 翻译一篇GraphQL文章:https://juejin.im/post/5ad353986fb9a028c14ae909
 - [ ] 翻译一篇Apollo GraphQL文章
+- [x] 《深入React技术栈》 
 
